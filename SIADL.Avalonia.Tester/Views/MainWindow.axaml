@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SIADL.Avalonia.Tester.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="500" Height="400"
+        x:Class="SIADL.Avalonia.Tester.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico" Background="{StaticResource BackgroundColor}"
+        Title="SIADL for Avalonia Tester Thingamajiga">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<StackPanel Margin="10" Spacing="5">
+		<TextBlock Text="FRESHMusicPlayer" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30"/>
+		<TextBlock Text="The quick brown fox jumps over the lazy dog" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<Button>This is a button</Button>
+		<Button>This is another button</Button>
+	</StackPanel>
+</Window>

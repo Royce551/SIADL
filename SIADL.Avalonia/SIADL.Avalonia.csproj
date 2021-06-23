@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.3" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.3" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.3" />
+   </ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="**\*.xaml">
+			<SubType>Designer</SubType>
+		</AvaloniaResource>
+		<AvaloniaResource Include="**\*.xml">
+			<SubType>Designer</SubType>
+		</AvaloniaResource>
+		<AvaloniaResource Include="Assets\*"/>
+	</ItemGroup>
+</Project>
