@@ -5,6 +5,7 @@
 		<Border Padding="20" Background="{StaticResource BackgroundColor}">
 			<StackPanel Background="{StaticResource BackgroundColor}">
 				<Button Content="Test"/>
+				<TextBox Watermark="Hello world"/>
 			</StackPanel>
 		</Border>
     </Design.PreviewWith>
@@ -18,55 +19,14 @@
 		<SolidColorBrush x:Key="BackgroundColor" Color="Black"/>
 		
 		<SolidColorBrush x:Key="Blue" Color="#FF338BC1"/>
+		<SolidColorBrush x:Key="Green" Color="#FF69B578"/>
 
 		<FontFamily x:Key="Font">avares://SIADL.Avalonia/Assets#IBM Plex Sans</FontFamily>
 	</Styles.Resources>
 
-	<Style Selector="Window">
-		<Setter Property="FontFamily" Value="{StaticResource Font}"/>
-		<Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
-		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-		<Setter Property="FontSize" Value="14"/>
-	</Style>
-	
-	<Style Selector="Button, ToggleButton">
-		<Setter Property="HorizontalContentAlignment" Value="Center"/>
-		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-		<Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
-		<Setter Property="Template">
-			<ControlTemplate>
-				<Border Name="PART_ButtonRootBorder"
-						Background="{TemplateBinding Background}"
-						BorderBrush="{TemplateBinding Background}"
-						BorderThickness="0"
-						CornerRadius="2">
-					<Panel>
-						<Border CornerRadius="2"
-								ClipToBounds="True">
-								<ContentPresenter Name="PART_ContentPresenter"
-												  Content="{TemplateBinding Content}"
-												  ContentTemplate="{TemplateBinding ContentTemplate}"
-												  Padding="{TemplateBinding Padding}"
-												  TextBlock.Foreground="{TemplateBinding Foreground}"
-												  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-												  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
-						</Border>
-					</Panel>
-				</Border>
-			</ControlTemplate>
-		</Setter>
-	</Style>
-	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{StaticResource Blue}" />
-		<Setter Property="BorderBrush" Value="{StaticResource Blue}" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
-	</Style>
-
-	<Style Selector="Button:pressed  /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{StaticResource Blue}" />
-		<Setter Property="BorderBrush" Value="{StaticResource Blue}" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
-	</Style>
-    <!-- Add Styles Here -->
+	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Button.axaml"/>
+	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Slider.axaml"/>
+	<StyleInclude Source="avares://SIADL.Avalonia/Controls/TabItem.axaml"/>
+	<StyleInclude Source="avares://SIADL.Avalonia/Controls/TextBox.axaml"/>	
+	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Window.axaml"/>
 </Styles>

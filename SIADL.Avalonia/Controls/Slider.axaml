@@ -1,0 +1,138 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <Slider Width="1000" Maximum="100" Value="50"/>
+        </Border>
+    </Design.PreviewWith>
+
+	<Style Selector="Thumb.SliderThumbStyle">
+		<Setter Property="BorderThickness" Value="0" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="500" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style Selector="Slider:horizontal">
+		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+		<Setter Property="BorderThickness" Value="5" />
+		<Setter Property="Foreground">
+			<Setter.Value>
+				<LinearGradientBrush>
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Color="#FF69B578" Offset="0"/>
+						<GradientStop Color="#FF338BC1" Offset="1"/>
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<ControlTemplate>
+				<DataValidationErrors>
+					<Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="2">
+						<Grid Name="grid" Margin="{TemplateBinding Padding}" RowDefinitions="Auto, *">
+							<Grid x:Name="SliderContainer" Grid.Row="1">
+								<Grid.Styles>
+									<Style Selector="TickBar">
+										<Setter Property="ReservedSpace" Value="{Binding #PART_Track.Thumb.Bounds}" />
+									</Style>
+								</Grid.Styles>
+								<Grid x:Name="HorizontalTemplate" ColumnDefinitions="Auto,Auto,*" MinHeight="1">
+									<Grid.RowDefinitions>
+										<RowDefinition Height="10" />
+										<RowDefinition Height="Auto" />
+										<RowDefinition Height="10" />
+									</Grid.RowDefinitions>
+									<Track Name="PART_Track" Grid.Row="1" Grid.ColumnSpan="3" IsDirectionReversed="{TemplateBinding IsDirectionReversed}" Orientation="Horizontal">
+										<Track.DecreaseButton>
+											<RepeatButton Name="PART_DecreaseButton" Background="{TemplateBinding Foreground}" Focusable="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+												<RepeatButton.Template>
+													<ControlTemplate>
+														<Grid>
+															<Border Name="FocusTarget" Background="Transparent" Margin="0,-10" />
+															<Border Name="TrackBackground" Background="{TemplateBinding Background}" Height="3" VerticalAlignment="Center" />
+														</Grid>
+													</ControlTemplate>
+												</RepeatButton.Template>
+											</RepeatButton>
+										</Track.DecreaseButton>
+										<Track.IncreaseButton>
+											<RepeatButton Name="PART_IncreaseButton" Background="{TemplateBinding Background}" Focusable="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+												<RepeatButton.Template>
+													<ControlTemplate>
+														<Grid>
+															<Border Name="FocusTarget" Background="Transparent" Margin="0,-10" />
+															<Border Name="TrackBackground" Background="{TemplateBinding Background}" Height="3" VerticalAlignment="Center" />
+														</Grid>
+													</ControlTemplate>
+												</RepeatButton.Template>
+											</RepeatButton>
+										</Track.IncreaseButton>
+										<Thumb Classes="SliderThumbStyle" Name="thumb" Margin="0" Padding="0" DataContext="{TemplateBinding Value}" Height="10" Width="10" />
+									</Track>
+								</Grid>
+							</Grid>
+						</Grid>
+					</Border>
+				</DataValidationErrors>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+	<Style Selector="Slider /template/ Track#PART_Track">
+		<Setter Property="Minimum" Value="{TemplateBinding Minimum}" />
+		<Setter Property="Maximum" Value="{TemplateBinding Maximum}" />
+		<Setter Property="Value" Value="{TemplateBinding Value, Mode=TwoWay}" />
+	</Style>
+
+	<!-- PointerOver State -->
+	<Style Selector="Slider:pointerover /template/ RepeatButton#PART_IncreaseButton">
+		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+	</Style>
+
+	<Style Selector="Slider:pointerover /template/ Thumb.SliderThumbStyle">
+		<Setter Property="Background" Value="{StaticResource Blue}" />
+
+	</Style>
+
+	<!--<Style Selector="Slider:pointover /template/ Thumb#thumb">
+		<Setter Property="Width" Value="17"/>
+		<Setter Property="Height" Value="17"/>
+	</Style>-->
+	
+	<Style Selector="Slider:pointerover /template/ Grid#SliderContainer">
+		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+	</Style>
+
+	<Style Selector="Slider:pointerover /template/ RepeatButton#PART_DecreaseButton">
+		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+	</Style>
+
+	<!-- Pressed State -->
+	<Style Selector="Slider:pressed /template/ RepeatButton#PART_IncreaseButton">
+		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+	</Style>
+
+	<Style Selector="Slider:pressed /template/ Thumb.SliderThumbStyle">
+		<Setter Property="Background" Value="{StaticResource Blue}" />
+	</Style>
+
+	<Style Selector="Slider:pointerover /template/ Grid#SliderContainer">
+		<Setter Property="Background" Value="Transparent" />
+	</Style>
+
+	<Style Selector="Slider:pointerover /template/ RepeatButton#PART_DecreaseButton">
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush>
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Color="#FF69B578" Offset="0"/>
+						<GradientStop Color="#FF338BC1" Offset="1"/>
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</Styles>

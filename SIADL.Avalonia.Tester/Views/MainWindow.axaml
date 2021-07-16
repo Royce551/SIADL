@@ -17,5 +17,6 @@
 		<TextBlock Text="The quick brown fox jumps over the lazy dog" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 		<Button>This is a button</Button>
 		<Button>This is another button</Button>
+		<TextBox Text="This is a text box."/>
 	</StackPanel>
 </Window>
