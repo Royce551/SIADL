@@ -8,15 +8,15 @@
 
 	<Style Selector="TextBox">
 		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}" />
-		<Setter Property="Background" Value="{StaticResource BackgroundColor}" />
+		<Setter Property="Background" Value="{StaticResource ControlColor}" />
 		<Setter Property="CaretBrush" Value="{StaticResource PrimaryTextColor}" />
-		<Setter Property="BorderBrush" Value="{StaticResource SecondaryTextColor}" />
+		<Setter Property="BorderBrush" Value="{StaticResource ControlColor}" />
 		<Setter Property="SelectionBrush" Value="{StaticResource Blue}" />
-		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="BorderThickness" Value="2" />
 		<Setter Property="FontSize" Value="14" />
-		<Setter Property="MinHeight" Value="{DynamicResource TextControlThemeMinHeight}" />
-		<Setter Property="MinWidth" Value="{DynamicResource TextControlThemeMinWidth}" />
-		<Setter Property="Padding" Value="{DynamicResource TextControlThemePadding}" />
+		<Setter Property="MinHeight" Value="0" />
+		<Setter Property="MinWidth" Value="0" />
+		<Setter Property="Padding" Value="5" />
 		<Setter Property="FocusAdorner" Value="{x:Null}" />
 		<Setter Property="ContextFlyout" Value="{StaticResource DefaultTextBoxContextFlyout}" />
 		<Setter Property="Template">
@@ -99,7 +99,8 @@
 	<!-- PointerOver State-->
 
 	<Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
-		<Setter Property="BorderBrush" Value="{StaticResource PrimaryTextColor}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource Blue}"/>
+		<Setter Property="Background" Value="{StaticResource ControlColor}"/>
 	</Style>
 
 	<Style Selector="TextBox:pointerover /template/ TextBlock#PART_Watermark, TextBox:pointerover /template/ TextBlock#PART_FloatingWatermark">

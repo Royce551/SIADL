@@ -8,13 +8,19 @@
 
 	<Style Selector="Thumb.SliderThumbStyle">
 		<Setter Property="BorderThickness" Value="0" />
+		<Setter Property="Width" Value="10"/>
+		<Setter Property="Height" Value="10"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate>
-					<Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="500" />
+					<Border Background="{StaticResource Blue}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="500" />
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
+	</Style>
+	<Style Selector="Thumb.SliderThumbStyle:pointerover">
+		<Setter Property="Width" Value="17"/>
+		<Setter Property="Height" Value="17"/>
 	</Style>
 	<Style Selector="Slider:horizontal">
 		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
@@ -43,7 +49,7 @@
 								<Grid x:Name="HorizontalTemplate" ColumnDefinitions="Auto,Auto,*" MinHeight="1">
 									<Grid.RowDefinitions>
 										<RowDefinition Height="10" />
-										<RowDefinition Height="Auto" />
+										<RowDefinition Height="10" />
 										<RowDefinition Height="10" />
 									</Grid.RowDefinitions>
 									<Track Name="PART_Track" Grid.Row="1" Grid.ColumnSpan="3" IsDirectionReversed="{TemplateBinding IsDirectionReversed}" Orientation="Horizontal">
@@ -71,7 +77,14 @@
 												</RepeatButton.Template>
 											</RepeatButton>
 										</Track.IncreaseButton>
-										<Thumb Classes="SliderThumbStyle" Name="thumb" Margin="0" Padding="0" DataContext="{TemplateBinding Value}" Height="10" Width="10" />
+										<Thumb Classes="SliderThumbStyle" Name="thumb" Margin="0" Padding="0" DataContext="{TemplateBinding Value}"  >
+											<Thumb.Transitions>
+												<Transitions>
+													<DoubleTransition Property="Width" Duration="0:0:.15"/>
+													<DoubleTransition Property="Height" Duration="0:0:.15"/>
+												</Transitions>
+											</Thumb.Transitions>
+										</Thumb>
 									</Track>
 								</Grid>
 							</Grid>
@@ -87,7 +100,7 @@
 		<Setter Property="Value" Value="{TemplateBinding Value, Mode=TwoWay}" />
 	</Style>
 
-	<!-- PointerOver State -->
+	 <!--PointerOver State--> 
 	<Style Selector="Slider:pointerover /template/ RepeatButton#PART_IncreaseButton">
 		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
 	</Style>
@@ -97,10 +110,10 @@
 
 	</Style>
 
-	<!--<Style Selector="Slider:pointover /template/ Thumb#thumb">
+	<Style Selector="Slider:pointover /template/ Thumb.SliderThumbStyle">
 		<Setter Property="Width" Value="17"/>
 		<Setter Property="Height" Value="17"/>
-	</Style>-->
+	</Style>
 	
 	<Style Selector="Slider:pointerover /template/ Grid#SliderContainer">
 		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
@@ -110,7 +123,7 @@
 		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
 	</Style>
 
-	<!-- Pressed State -->
+	 <!--Pressed State--> 
 	<Style Selector="Slider:pressed /template/ RepeatButton#PART_IncreaseButton">
 		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
 	</Style>

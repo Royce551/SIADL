@@ -11,12 +11,13 @@
     </Design.PreviewWith>
 	<Styles.Resources>
 		<SolidColorBrush x:Key="PrimaryTextColor" Color="White"/>
-		<SolidColorBrush x:Key="SecondaryTextColor" Color="#FFDADADA"/>
-		<SolidColorBrush x:Key="ControlBoxColor" Color="#FF2C2F33"/>
+		<SolidColorBrush x:Key="SecondaryTextColor" Color="#DADADA"/>
+		<SolidColorBrush x:Key="ControlBoxColor" Color="#2C2F33"/>
 		<SolidColorBrush x:Key="NavBarColor" Color="Black"/>
-		<SolidColorBrush x:Key="ForegroundColor" Color="#FF2C2F33"/>
-		<SolidColorBrush x:Key="SecondaryColor" Color="#FF46494E"/>
+		<SolidColorBrush x:Key="ForegroundColor" Color="#2C2F33"/>
+		<SolidColorBrush x:Key="SecondaryColor" Color="#323539"/>
 		<SolidColorBrush x:Key="BackgroundColor" Color="Black"/>
+		<SolidColorBrush x:Key="ControlColor" Color="#40444A"/>
 		
 		<SolidColorBrush x:Key="Blue" Color="#FF338BC1"/>
 		<SolidColorBrush x:Key="Green" Color="#FF69B578"/>
@@ -24,6 +25,7 @@
 		<FontFamily x:Key="Font">avares://SIADL.Avalonia/Assets#IBM Plex Sans</FontFamily>
 	</Styles.Resources>
 
+	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Tooltip.axaml"/>
 	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Button.axaml"/>
 	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Slider.axaml"/>
 	<StyleInclude Source="avares://SIADL.Avalonia/Controls/TabItem.axaml"/>

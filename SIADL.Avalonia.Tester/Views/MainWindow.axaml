@@ -12,11 +12,13 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<StackPanel Margin="10" Spacing="5">
-		<TextBlock Text="FRESHMusicPlayer" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30"/>
+	<StackPanel Margin="10">
+		<TextBlock Text="SIADL Tester Thingamajiga" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30"/>
 		<TextBlock Text="The quick brown fox jumps over the lazy dog" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 		<Button>This is a button</Button>
+		<Slider/>
 		<Button>This is another button</Button>
 		<TextBox Text="This is a text box."/>
+		
 	</StackPanel>
 </Window>
