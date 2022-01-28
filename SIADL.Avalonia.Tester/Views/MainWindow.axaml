@@ -5,14 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" Width="500" Height="400"
         x:Class="SIADL.Avalonia.Tester.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico" Background="{StaticResource BackgroundColor}"
+        Icon="/Assets/avalonia-logo.ico" Background="{DynamicResource BackgroundColor}"
         Title="SIADL for Avalonia Tester Thingamajiga">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<StackPanel Margin="10">
+	<StackPanel Margin="10" Spacing="5">
+		<ComboBox x:Name="Themes" SelectedIndex="0">
+			<ComboBoxItem>Light</ComboBoxItem>
+			<ComboBoxItem>Dark</ComboBoxItem>
+		</ComboBox>
+		
 		<TextBlock Text="SIADL Tester Thingamajiga" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30"/>
 		<TextBlock Text="The quick brown fox jumps over the lazy dog" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 		<Button>This is a button</Button>

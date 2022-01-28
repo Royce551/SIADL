@@ -32,4 +32,6 @@
 	<StyleInclude Source="avares://SIADL.Avalonia/Controls/TabItem.axaml"/>
 	<StyleInclude Source="avares://SIADL.Avalonia/Controls/TextBox.axaml"/>
 	<StyleInclude Source="avares://SIADL.Avalonia/Controls/Window.axaml"/>
+	
+	
 </Styles>
