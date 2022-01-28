@@ -5,5 +5,5 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SIADL.Avalonia.Common.Views.TextEntryBox"
         Title="TextEntryBox">
-  Welcome to Avalonia!
+	
 </Window>

@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:svg="clr-namespace:Avalonia.Svg.Skia;assembly=Avalonia.Svg.Skia"
+        mc:Ignorable="d" Width="800" Height="20"
+        x:Class="SIADL.Avalonia.Tester.Views.Window2"
+        Title="Window2">
+
+	<Window.Resources>
+		<svg:SvgImage x:Key="Battery" Source="/Assets/battery.svg"/>
+		<svg:SvgImage x:Key="Volume" Source="/Assets/volume.svg"/>
+		<svg:SvgImage x:Key="Wifi" Source="/Assets/wifi.svg"/>
+		<svg:SvgImage x:Key="Play" Source="/Assets/play.svg"/>
+	</Window.Resources>
+	
+	<Border Background="{StaticResource SecondaryColor}">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0" Spacing="5">
+			<TextBlock Text="Memory: 84%"/>
+			<TextBlock Text="CPU: 15%" Margin="0,0,10,0"/>
+			
+			<Image Source="{DynamicResource Play}" Margin="0,1,0,1"/>
+			<TextBlock Text="ShibayanRecords - dear Miss Daydreamer" Margin="0,0,10,0" Width="200" TextTrimming="WordEllipsis"/>
+			
+			<Image Source="{DynamicResource Wifi}" Margin="0,1,0,2"/>
+			<Image Source="{DynamicResource Volume}" Margin="0,1,0,1"/>
+			<Image Source="{DynamicResource Battery}" Margin="-5,1,-5,2"/>
+			<TextBlock Text="100%" Margin="0,0,10,0"/>
+			
+			<TextBlock Text="4:34 PM" FontWeight="Bold"/>
+		</StackPanel>
+	</Border>
+</Window>

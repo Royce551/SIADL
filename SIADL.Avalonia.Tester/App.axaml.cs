@@ -22,7 +22,6 @@ namespace SIADL.Avalonia.Tester
                     DataContext = new MainWindowViewModel(),
                 };
             }
-
             base.OnFrameworkInitializationCompleted();
         }
     }

@@ -1,0 +1,71 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:svg="clr-namespace:Avalonia.Svg.Skia;assembly=Avalonia.Svg.Skia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SIADL.Avalonia.Tester.Views.Window1"
+        Title="Window1">
+
+	<Window.Resources>
+		<svg:SvgImage x:Key="Logout" Source="/Assets/logout.svg"/>
+		<svg:SvgImage x:Key="Restart" Source="/Assets/restart.svg"/>
+		<svg:SvgImage x:Key="Shutdown" Source="/Assets/shutdown.svg"/>
+		<svg:SvgImage x:Key="Sleep" Source="/Assets/sleep.svg"/>
+	</Window.Resources>
+	
+	<Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.5*"/>
+			<ColumnDefinition Width="0.5*"/>
+		</Grid.ColumnDefinitions>
+
+		<TextBlock Grid.ColumnSpan="2" Text="Fueeh? You're done using ur computa alweady mastew?" FontWeight="Bold" FontSize="16" Margin="0,0,0,20"/>
+
+		<Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,5,0">
+			<StackPanel>
+				<Image Source="{DynamicResource Shutdown}" Width="75" Height="75"/>
+				<TextBlock Text="Shut Down" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{StaticResource Red}"/>
+			</StackPanel>
+		</Button>
+		<Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,0,0">
+			<StackPanel>
+				<Image Source="{DynamicResource Restart}" Width="75" Height="75"/>
+				<TextBlock Text="Restart" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{StaticResource Red}"/>
+			</StackPanel>
+		</Button>
+
+		<StackPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="0,10,0,10" Spacing="5">
+			<Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+				<StackPanel Orientation="Horizontal">
+					<Image Source="{DynamicResource Logout}" Margin="0,0,5,0"/>
+					<StackPanel>
+						<TextBlock Text="Log Off" FontSize="16"/>
+						<TextBlock Text="takes u back to the login scween" Foreground="{StaticResource SecondaryTextColor}"/>
+					</StackPanel>
+				</StackPanel>
+
+			</Button>
+			<Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+				<StackPanel Orientation="Horizontal">
+					<Image Source="{DynamicResource Sleep}" Margin="0,0,5,0"/>
+					<StackPanel>
+						<TextBlock Text="Sleep" FontSize="16"/>
+						<TextBlock Text="brings ur computew to a low powa state without tuwning off ur apps" Foreground="{StaticResource SecondaryTextColor}"/>
+					</StackPanel>
+				</StackPanel>
+
+			</Button>
+		</StackPanel>
+
+		<DockPanel Margin="-10" Grid.Row="3" Grid.ColumnSpan="2" LastChildFill="False" VerticalAlignment="Bottom" Background="{StaticResource ForegroundColor}">
+			<Button Margin="10" DockPanel.Dock="Right">Cancel</Button>
+		</DockPanel>
+	</Grid>
+</Window>

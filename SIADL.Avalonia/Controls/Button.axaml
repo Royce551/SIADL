@@ -9,8 +9,8 @@
 	<Style Selector="Button, ToggleButton">
 		<Setter Property="HorizontalContentAlignment" Value="Center"/>
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-		<Setter Property="Background" Value="{StaticResource ControlColor}"/>
+		<Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"/>
+		<Setter Property="Background" Value="{DynamicResource ControlColor}"/>
 		<Setter Property="Padding" Value="5"/>
 		<Setter Property="Template">
 			<ControlTemplate>
@@ -36,14 +36,14 @@
 		</Setter>
 	</Style>
 	<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{StaticResource Blue}" />
-		<Setter Property="BorderBrush" Value="{StaticResource Blue}" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="Background" Value="{DynamicResource Blue}" />
+		<Setter Property="BorderBrush" Value="{DynamicResource Blue}" />
+		<Setter Property="TextBlock.Foreground" Value="White"/>
 	</Style>
 
 	<Style Selector="Button:pressed  /template/ ContentPresenter#PART_ContentPresenter">
-		<Setter Property="Background" Value="{StaticResource Blue}" />
-		<Setter Property="BorderBrush" Value="{StaticResource Blue}" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="Background" Value="{DynamicResource Blue}" />
+		<Setter Property="BorderBrush" Value="{DynamicResource Blue}" />
+		<Setter Property="TextBlock.Foreground" Value="White" />
 	</Style>
 </Styles>

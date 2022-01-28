@@ -42,9 +42,9 @@
 	</Styles.Resources>
 
 	<Style Selector="ToolTip">
-		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}" />
-		<Setter Property="Background" Value="{StaticResource ForegroundColor}" />
-		<Setter Property="BorderBrush" Value="{StaticResource ForegroundColor}" />
+		<Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}" />
+		<Setter Property="Background" Value="{DynamicResource ForegroundColor}" />
+		<Setter Property="BorderBrush" Value="{DynamicResource ForegroundColor}" />
 		<Setter Property="BorderThickness" Value="5" />
 		<Setter Property="FontSize" Value="{DynamicResource ToolTipContentThemeFontSize}" />
 		<Setter Property="Padding" Value="5" />

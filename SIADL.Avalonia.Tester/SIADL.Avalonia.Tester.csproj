@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,10 +9,21 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.3" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.3" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.3" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.3" />
+    <None Remove="Assets\battery.svg" />
+    <None Remove="Assets\logout.svg" />
+    <None Remove="Assets\play.svg" />
+    <None Remove="Assets\restart.svg" />
+    <None Remove="Assets\shutdown.svg" />
+    <None Remove="Assets\sleep.svg" />
+    <None Remove="Assets\volume.svg" />
+    <None Remove="Assets\wifi.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.11" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.11" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.11" />
+    <PackageReference Include="Avalonia.Svg.Skia" Version="0.10.11.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SIADL.Avalonia\SIADL.Avalonia.csproj" />

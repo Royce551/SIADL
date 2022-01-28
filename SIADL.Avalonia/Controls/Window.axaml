@@ -7,9 +7,9 @@
     </Design.PreviewWith>
 
 	<Style Selector="Window">
-		<Setter Property="FontFamily" Value="{StaticResource Font}"/>
-		<Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
-		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
+		<Setter Property="FontFamily" Value="{DynamicResource Font}"/>
+		<Setter Property="Background" Value="{DynamicResource BackgroundColor}"/>
+		<Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"/>
 		<Setter Property="FontSize" Value="14"/>
 	</Style>
 </Styles>

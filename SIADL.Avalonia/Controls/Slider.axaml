@@ -13,7 +13,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate>
-					<Border Background="{StaticResource Blue}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="500" />
+					<Border Background="{DynamicResource Blue}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="500" />
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -23,7 +23,7 @@
 		<Setter Property="Height" Value="17"/>
 	</Style>
 	<Style Selector="Slider:horizontal">
-		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+		<Setter Property="Background" Value="{DynamicResource SecondaryColor}" />
 		<Setter Property="BorderThickness" Value="5" />
 		<Setter Property="Foreground">
 			<Setter.Value>
@@ -102,11 +102,11 @@
 
 	 <!--PointerOver State--> 
 	<Style Selector="Slider:pointerover /template/ RepeatButton#PART_IncreaseButton">
-		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+		<Setter Property="Background" Value="{DynamicResource SecondaryColor}" />
 	</Style>
 
 	<Style Selector="Slider:pointerover /template/ Thumb.SliderThumbStyle">
-		<Setter Property="Background" Value="{StaticResource Blue}" />
+		<Setter Property="Background" Value="{DynamicResource Blue}" />
 
 	</Style>
 
@@ -116,20 +116,20 @@
 	</Style>
 	
 	<Style Selector="Slider:pointerover /template/ Grid#SliderContainer">
-		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+		<Setter Property="Background" Value="{DynamicResource SecondaryColor}" />
 	</Style>
 
 	<Style Selector="Slider:pointerover /template/ RepeatButton#PART_DecreaseButton">
-		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+		<Setter Property="Background" Value="{DynamicResource SecondaryColor}" />
 	</Style>
 
 	 <!--Pressed State--> 
 	<Style Selector="Slider:pressed /template/ RepeatButton#PART_IncreaseButton">
-		<Setter Property="Background" Value="{StaticResource SecondaryColor}" />
+		<Setter Property="Background" Value="{DynamicResource SecondaryColor}" />
 	</Style>
 
 	<Style Selector="Slider:pressed /template/ Thumb.SliderThumbStyle">
-		<Setter Property="Background" Value="{StaticResource Blue}" />
+		<Setter Property="Background" Value="{DynamicResource Blue}" />
 	</Style>
 
 	<Style Selector="Slider:pointerover /template/ Grid#SliderContainer">

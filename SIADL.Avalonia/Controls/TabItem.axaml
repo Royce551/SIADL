@@ -20,7 +20,7 @@
 		<Setter Property="FontSize" Value="16" />
 		<Setter Property="FontWeight" Value="Regular" />
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}" />
 		<Setter Property="Padding" Value="10,0" />
 		<Setter Property="Margin" Value="0,-10" />
 		<Setter Property="MinHeight" Value="{DynamicResource TabItemMinHeight}" />
@@ -59,7 +59,7 @@
 	<!--  We don't use selector to PART_LayoutRoot, so developer can override selected item background with TabStripItem.Background  -->
 	<Style Selector="TabItem:selected">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="TextBlock.Foreground" Value="{DynamicResource PrimaryTextColor}" />
 		<Setter Property="TextBlock.FontWeight" Value="Bold"/>
 	</Style>
 	<Style Selector="TabItem:selected /template/ Border#PART_SelectedPipe">
@@ -69,25 +69,25 @@
 	<!-- PointerOver state -->
 	<Style Selector="TabItem:pointerover /template/ Border#PART_LayoutRoot">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="TextBlock.Foreground" Value="{DynamicResource PrimaryTextColor}" />
 	</Style>
 
 	<!-- Selected PointerOver state -->
 	<Style Selector="TabItem:selected:pointerover /template/ Border#PART_LayoutRoot">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="TextBlock.Foreground" Value="{DynamicResource PrimaryTextColor}" />
 	</Style>
 
 	<!-- Pressed state -->
 	<Style Selector="TabItem:pressed /template/ Border#PART_LayoutRoot">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="TextBlock.Foreground" Value="{DynamicResource PrimaryTextColor}" />
 	</Style>
 
 	<!-- Selected Pressed state -->
 	<Style Selector="TabItem:pressed /template/ Border#PART_LayoutRoot">
 		<Setter Property="Background" Value="Transparent" />
-		<Setter Property="TextBlock.Foreground" Value="{StaticResource PrimaryTextColor}" />
+		<Setter Property="TextBlock.Foreground" Value="{DynamicResource PrimaryTextColor}" />
 	</Style>
 
 	<!-- Disabled state -->
